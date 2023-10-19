@@ -40,27 +40,31 @@ options:
 
 Example 1 - direct call:
 ```
-$ python yt-transcriptor.py https://www.youtube.com/watch?v=ePXZguxYewI
-[+] Fetching video transcript: ePXZguxYewI
+$ python yt-transcriptor.py https://www.youtube.com/watch?v=8uEIBdjiX0I
+[+] Fetching video transcript: 8uEIBdjiX0I
 [+] Fetched in 0.77s
 [+] Forming sentences
 /home/max/Documents/dev/python/yt-transcriptor/.venv/lib/python3.10/site-packages/transformers/pipelines/token_classification.py:169: UserWarning: `grouped_entities` is deprecated and will be removed in version v5.0.0, defaulted to `aggregation_strategy="none"` instead.
   warnings.warn(
-[+] Formed sentences in 7.12s
-Please Like and Comment.
+[+] Formed sentences in 30.12s
+[Music].
+Welcome to an exploration of a transformative Wellness practice: intermittent fasting.
+...
 ```
 "Please Like and Comment." is the output to stdout and can be redirected to file with for example `python yt-transcriptor.py https://www.youtube.com/watch?v=ePXZguxYewI > transcript.txt`.
 
 Example 2 - in a pipeline:
 ```
-$ echo https://www.youtube.com/watch?v=ePXZguxYewI | python yt-transcriptor.py | awk '{print "Output: "$0}'
-[+] Fetching video transcript: ePXZguxYewI
+$ echo https://www.youtube.com/watch?v=8uEIBdjiX0I | python yt-transcriptor.py | awk '{print "Output: "$0}'
+[+] Fetching video transcript: 8uEIBdjiX0I
 [+] Fetched in 0.79s
 [+] Forming sentences
 /home/max/Documents/dev/python/yt-transcriptor/.venv/lib/python3.10/site-packages/transformers/pipelines/token_classification.py:169: UserWarning: `grouped_entities` is deprecated and will be removed in version v5.0.0, defaulted to `aggregation_strategy="none"` instead.
   warnings.warn(
-[+] Formed sentences in 7.02s
-Output: Please Like and Comment.
+[+] Formed sentences in 30.02s
+Output: [Music].
+Welcome to an exploration of a transformative Wellness practice: intermittent fasting.
+...
 ```
 
 To supress progress update redirect stderr to `/dev/null` or a log file, for example `python yt-transcriptor.py https://www.youtube.com/watch?v=ePXZguxYewI 2>/dev/null`
