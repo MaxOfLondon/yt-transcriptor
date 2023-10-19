@@ -51,7 +51,7 @@ $ python yt-transcriptor.py https://www.youtube.com/watch?v=8uEIBdjiX0I
 Welcome to an exploration of a transformative Wellness practice: intermittent fasting.
 ...
 ```
-"Please Like and Comment." is the output to stdout and can be redirected to file with for example `python yt-transcriptor.py https://www.youtube.com/watch?v=ePXZguxYewI > transcript.txt`.
+The lines below `[+] Formed sentences in 30.12s` is the output of the program to stdout and it can be redirected to file instead, with, for example `python yt-transcriptor.py https://www.youtube.com/watch?v=8uEIBdjiX0I > transcript.txt`.
 
 Example 2 - in a pipeline:
 ```
